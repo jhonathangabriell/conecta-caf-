@@ -55,3 +55,20 @@
         </div>
     </div>
 </div>
+
+    @section Scripts
+    {
+        <script>
+            let datatable = new DataTable('#dataTable', {
+                language: {
+                    url: '../../lib/datatables/pt-BR.json'
+                },
+                initComplete: function(settings, json) {
+                    document.querySelector('.dt-length').classList.add('text-xs');
+                    document.querySelector('.dt-search').classList.add('text-xs');
+                    document.querySelector('.dt-info').classList.add('text-xs');
+                    document.querySelector('dt-paging').classList.add('text-xs');
+                }
+            });
+        </script>
+    }

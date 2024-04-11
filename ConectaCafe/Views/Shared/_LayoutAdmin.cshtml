@@ -35,6 +35,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="~/assets/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
 </head>
 
 <body class="g-sidenav-show bg-gray-200" class="min-vh-100">
@@ -189,6 +190,7 @@
   </main>
 
   <!--   Core JS Files   -->
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
   <script src="~/assets/js/core/popper.min.js"></script>
   <script src="~/assets/js/core/bootstrap.min.js"></script>
   <script src="~/assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -206,6 +208,7 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="~/assets/js/material-dashboard.min.js?v=3.1.0"></script>
+  <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
   @await RenderSectionAsync("Scripts", required: false)
 </body>
 
