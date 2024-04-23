@@ -32,13 +32,14 @@ public class AppDbContext : DbContext
             .HasOne(bt => bt.Blog)
             .WithMany(b => b.BlogTags)
             .HasForeignKey(bt => bt.BlogId);
-
-            builder.Entity<BlogTag>()
+        
+        builder.Entity<BlogTag>()
             .HasOne(bt => bt.Tag)
             .WithMany(t => t.BlogTags)
             .HasForeignKey(bt => bt.TagId);
-
         #endregion
 
     }
+
+
 }

@@ -552,13 +552,13 @@ function getEventTarget(e) {
 
 window.onload = function() {
   // Material Design Input function
-  var inputs = document.querySelectorAll('input');
+  var inputs = document.querySelectorAll('input, select, textarea');
 
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('focus', function(e) {
       this.parentElement.classList.add('is-focused');
     }, false);
-
+    
     inputs[i].onkeyup = function(e) {
       if (this.value != "") {
         this.parentElement.classList.add('is-filled');

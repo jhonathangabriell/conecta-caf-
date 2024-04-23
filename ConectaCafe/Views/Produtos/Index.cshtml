@@ -1,6 +1,6 @@
-@model IEnumerable<ConectaCafe.Models.Categoria>
+@model IEnumerable<ConectaCafe.Models.Produto>
 @{
-    ViewData["Title"] = "Categorias";
+    ViewData["Title"] = "Produtos";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -21,8 +21,14 @@
                     <table id="dataTable" class="table align-items-center justify-content-center mb-0 w-100">
                         <thead class="p-0">
                             <tr>
-                                <th class="p-0 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
                                     Nome
+                                </th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+                                    Categoria
+                                </th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 text-start">
+                                    Preço
                                 </th>
                                 <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
                                     Ações
@@ -35,6 +41,12 @@
                                 <tr>
                                     <td class="text-dark text-sm">
                                         @Html.DisplayFor(modelItem => item.Nome)
+                                    </td>
+                                    <td class="text-dark text-sm">
+                                        @Html.DisplayFor(modelItem => item.Categoria.Nome)
+                                    </td>
+                                    <td class="text-dark text-sm text-start">
+                                        @Html.DisplayFor(modelItem => item.Preco)
                                     </td>
                                     <td>
                                         <a asp-action="Edit" asp-route-id="@item.Id" title="Alterar">
