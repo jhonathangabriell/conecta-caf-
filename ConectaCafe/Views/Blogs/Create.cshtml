@@ -1,7 +1,7 @@
-@model ConectaCafe.Models.Avaliacao
+@model ConectaCafe.Models.Blog
 
 @{
-    ViewData["Title"] = "Avaliações";
+    ViewData["Title"] = "Blogs";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -20,10 +20,10 @@
                     <div class="col-lg-8 col-md-9">
                         <div class="col-12 mb-3">
                             <div class="input-group input-group-outline mb-1">
-                                <label asp-for="Pessoa" class="form-label"></label>
-                                <input asp-for="Pessoa" class="form-control" />
+                                <label asp-for="Titulo" class="form-label"></label>
+                                <input asp-for="Titulo" class="form-control" />
                             </div>
-                            <span asp-validation-for="Pessoa" class="text-danger text-sm"></span>
+                            <span asp-validation-for="Titulo" class="text-danger text-sm"></span>
                         </div>
                         <div class="col-12 mb-3">
                             <div class="input-group input-group-outline mb-1">
@@ -35,19 +35,10 @@
                         <div class="row">
                             <div class="col-8 mb-3">
                                 <div class="input-group input-group-outline mb-1">
-                                    <label asp-for="Nota" class="form-label"></label>
-                                    <input asp-for="Nota" class="form-control" asp-items="ViewBag.CategoriaId">
-                                        
-
+                                    <label asp-for="DataBlog" class="form-label"></label>
+                                    <input asp-for="DataBlog" class="form-control" asp-items="ViewBag.CategoriaId">
                                 </div>
-                                <span asp-validation-for="Nota" class="text-danger text-sm"></span>
-                            </div>
-                            <div class="col-4 mb-3">
-                                <div class="input-group input-group-outline mb-1">
-                                    <label asp-for="DataAvaliacao" class="form-label"></label>
-                                    <input asp-for="DataAvaliacao" class="form-control" />
-                                </div>
-                                <span asp-validation-for="DataAvaliacao" class="text-danger text-sm"></span>
+                                <span asp-validation-for="DataBlog" class="text-danger text-sm"></span>
                             </div>
                         </div>
                     </div>

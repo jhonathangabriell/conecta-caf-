@@ -1,6 +1,6 @@
-@model IEnumerable<ConectaCafe.Models.Avaliacao>
+@model IEnumerable<ConectaCafe.Models.Blog>
 @{
-    ViewData["Title"] = "Avaliações";
+    ViewData["Title"] = "Blogs";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -22,15 +22,15 @@
                         <thead class="p-0">
                             <tr>
                                 <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
-                                    Nome
+                                    Título
                                 </th>
                                 <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
-                                    Data da Avaliação
+                                    Texto
                                 </th>
                                 <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 text-start">
-                                    Nota
+                                    Data da Publicação
                                 </th>
-                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 text-start">
                                     Ações
                                 </th>
                             </tr>
@@ -40,13 +40,13 @@
                             {
                                 <tr>
                                     <td class="text-dark text-sm">
-                                        @Html.DisplayFor(modelItem => item.Pessoa)
+                                        @Html.DisplayFor(modelItem => item.Titulo)
                                     </td>
                                     <td class="text-dark text-sm">
-                                        @Html.DisplayFor(modelItem => item.DataAvaliacao)
+                                        @Html.DisplayFor(modelItem => item.Texto)
                                     </td>
                                     <td class="text-dark text-sm text-start">
-                                        @Html.DisplayFor(modelItem => item.Nota)
+                                        @Html.DisplayFor(modelItem => item.DataBlog)
                                     </td>
                                     <td>
                                         <a asp-action="Edit" asp-route-id="@item.Id" title="Alterar">

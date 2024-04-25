@@ -1,7 +1,7 @@
-@model ConectaCafe.Models.Avaliacao
+@model ConectaCafe.Models.Blog
 
 @{
-    ViewData["Title"] = "Avaliações";
+    ViewData["Title"] = "Blog";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -19,8 +19,8 @@
                     <div class="col-lg-8 col-md-9">
                         <div class="col-12 mb-3">
                             <div class="input-group input-group-outline mb-1">
-                                <label asp-for="Pessoa" class="form-label"></label>
-                                <input asp-for="Pessoa" class="form-control" readonly />
+                                <label asp-for="Titulo" class="form-label"></label>
+                                <input asp-for="Titulo" class="form-control" readonly />
                             </div>
                         </div>
                         <div class="col-12 mb-3">
@@ -32,8 +32,8 @@
                         <div class="row">
                             <div class="col-8 mb-3">
                                 <div class="input-group input-group-outline mb-1">
-                                    <label asp-for="Nota" class="form-label"></label>
-                                    <input asp-for="Nota" class="form-control" readonly>
+                                    <label asp-for="DataBlog" class="form-label"></label>
+                                    <input asp-for="DataBlog" class="form-control" readonly>
                                 </div>
                             </div>
                             <div class="col-4 mb-3">

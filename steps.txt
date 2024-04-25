@@ -15,3 +15,5 @@ dotnet-aspnet-codegenerator controller -name ProdutosController -m Produto -dc A
 
 dotnet-aspnet-codegenerator controller -name AvaliacoesController -m Avaliacao -dc AppDbContext -outDir Controllers -l "~/Views/Shared/_LayoutAdmin.cshtml"
 
+dotnet-aspnet-codegenerator controller -name BlogsController -m Blog -dc AppDbContext -outDir Controllers -l "~/Views/Shared/_LayoutAdmin.cshtml"
+
